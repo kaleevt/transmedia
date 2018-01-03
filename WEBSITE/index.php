@@ -2,7 +2,7 @@
     require("config.php"); 
     $submitted_username = ''; 
     if(!empty($_POST)){ 
-        $query = "CALL selectUser(?)"; 
+        $query = "CALL selectUsername(?)"; 
         
         try{ 
             $stmt = $db->prepare($query); 
@@ -26,8 +26,8 @@
             unset($row['salt']); 
             unset($row['password']); 
             $_SESSION['user'] = $row;  
-            header("Location: home.php"); 
-            die("Redirecting to: home.php"); 
+            header("Location: secret.php"); 
+            die("Redirecting to: secret.php"); 
         } 
         else{ 
             print("Login Failed."); 
@@ -36,57 +36,49 @@
     } 
 ?> 
 
-<!DOCTYPE html>
-<html>
-<title>Outrageous</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<style>
-body,h1 {font-family: "Raleway", sans-serif}
-body, html {height: 100%}
-.bgimg {
-    background-image: url('/images/alien.jpg');
-    min-height: 100%;
-    background-position: center;
-    background-size: cover;
-}
-</style>
-<body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="">
 
-<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
-  <div class="w3-display-topleft w3-padding-large w3-xlarge">
-    Outrageous
-  </div>
-  <div class="w3-display-middle">
-    
-    <hr class="w3-border-grey" style="margin:auto;width:40%">
-    <div class="w3-container ">
-              <h1 class="w3-jumbo w3-animate-top">Login</h1>
-            </div>
+    <title>OUTRAGEOUS</title>
 
-            <form class="w3-container" action="index.php" method="post">
-              <label class="w3-text-black"><b>Username</b></label>
-              <input class="w3-input w3-border w3-light-grey" placeholder="Username" name="username" type="text">
-                
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-              <label class="w3-text-black"><b>Password</b></label>
-              <input class="w3-input w3-border w3-light-grey" placeholder="Password" name="password" type="password">
-              <input type="submit" class="w3-btn w3-blue-grey" value="Login"/> 
-              
-            </form>  
-             <button class="w3-btn w3-blue-grey" href="register.php">Register</button>
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+     <link rel="stylesheet" type="text/css" href="css/demo.css" />
+
+    <script type="text/javascript" src="js/modernizr.custom.86080.js"></script>
+
+  </head>
+
+  <body id="page">
+        <ul class="cb-slideshow">
+            <li><span><img src="images/alien.jpg"></span><div><h3>THE FOREIGNER</h3></div></li>
+            <li><span><img src="images/other.jpg"></span><div><h3>THE QUESTIONED</h3></div></li>
+            <li><span><img src="images/guy.jpg"></span><div><h3>THE MALE</h3></div></li>
+            <li><span><img src="images/wall-2564902_1920.jpg"></span><div><h3>THE STRUGGLER</h3></div></li>
+            <li><span><img src="images/female.jpg"></span><div><h3>THE FEMALE</h3></div></li>
+        </ul>
+      
+    <div class="container">
+
+        <form class="form-signin" action="index.php" method="post">
+           <h2 class="form-signin-heading">Please sign in</h2>
+           
+            <input type="text" id="inputUsername" placeholder="Username" name="username" class="form-control" value="<?php echo $submitted_username;?>"/>
             
-  </div>
-  <div class="w3-display-bottomleft w3-padding-large">
-    Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
-  </div>
-</div>
-
-</body>
+              <input type="password" id="inPassword" placeholder="Password" name="password" value="" class="form-control">
+            
+            <input type="submit" class="btn btn-lg btn-primary btn-block" value="Login" /> 
+          </form>    
+        <p>Don't have an account?</p> <a href="register.php"><button>Register</button></a>
+    </div> <!-- /container -->
+  </body>
 </html>
-
-  
-
-  

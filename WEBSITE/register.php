@@ -11,7 +11,7 @@
         { die("Invalid E-Mail Address"); } 
          
         // Check if the username is already taken
-        $query = "CALL selectUser(?)"; 
+        $query = "CALL selectUsername(?)"; 
         
         try { 
             $stmt = $db->prepare($query); 
@@ -21,7 +21,7 @@
         catch(PDOException $ex){ die("Failed to run query: " . $ex->getMessage()); } 
         $row = $stmt->fetch(); 
         if($row){ die("This username is already in use"); } 
-        $query = "CALL selectEmail(?)";
+        $query = "CALL selectemail(?)";
          
         try { 
             $stmt = $db->prepare($query); 
@@ -33,7 +33,7 @@
         if($row){ die("This email address is already registered"); } 
          
         // Add row to database 
-        $query = "CALL insertUser(?,?,?,?)"; 
+        $query = "CALL insertUsert(?,?,?,?)"; 
          
         // Security measures
         $salt = dechex(mt_rand(0, 2147483647)) . dechex(mt_rand(0, 2147483647)); 
@@ -64,58 +64,4 @@
         <p style="color:darkred;">* You may enter a false email address if desired. This demo database does not store addresses for purposes outside of this tutorial.</p><br />
         <input type="submit" class="btn btn-info" value="Register" /> 
     </form>
-
-<!DOCTYPE html>
-<html>
-<title>Outragous</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<style>
-body,h1 {font-family: "Raleway", sans-serif}
-body, html {height: 100%}
-.bgimg {
-    background-image: url('/images/alien.jpg');
-    min-height: 100%;
-    background-position: center;
-    background-size: cover; 
-}
-</style>
-<body>
-
-<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
-  <div class="w3-display-topleft w3-padding-large w3-xlarge">
-    Outragous
-  </div>
-  <div class="w3-display-middle">
-    
-    <hr class="w3-border-grey" style="margin:auto;width:40%">
-    <div class="w3-container ">
-              <h1 class="w3-jumbo w3-animate-top">Register</h1>
-            </div>
-
-            <form class="w3-container" action="register.php" method="post">
-              <label class="w3-text-black"><b>Username</b></label>
-              <input class="w3-input w3-border w3-light-grey" placeholder="Username" name="username" type="text">
-             <label class="w3-text-black"><b>Email</b></label> 
-              <input class="w3-input w3-border w3-light-grey" placeholder="Email" name="email" type="text">
-              <label class="w3-text-black"><b>Password</b></label>
-              <input class="w3-input w3-border w3-light-grey" placeholder="Password" name="password" type="password">
-              <input type="submit" class="w3-btn w3-blue-grey" value="Register"/> 
-              
-            </form>  
-             
-            
-  </div>
-  <div class="w3-display-bottomleft w3-padding-large">
-    Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
-  </div>
-</div>
-
-</body>
-</html>
-
-  
-
-        
+      
