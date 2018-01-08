@@ -1,0 +1,158 @@
+<html>
+<head>
+<style>
+div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width:256px;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+ 
+
+
+</style>
+    <title>OUTRAGEOUS</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <script src="js/style.js"></script>
+<!--///////////////////////////////-->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+   <!-- The scrollable area -->
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+
+
+<!-- Navbar -->
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#"> </a>
+        
+    </div>
+    <div>
+       <img src="images/logo.png" width="50px" align="left" id="logo">
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">HOME</a></li>
+              <li><a href="articles.php">ARTICLES</a></li>
+
+        
+
+       
+            <?php
+    require("config.php");
+    if(empty($_SESSION['user'])) 
+    {
+        header("Location: secret.php");
+        die("Redirecting to secret.php"); 
+    }
+?>
+            <li><a href="logout.php">LOGOUT</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav> 
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:1000px;margin-top:100px">
+
+
+    <p><b>Racism</b>
+        <br><br>
+
+
+Racism. Yep we have come leaps and bounds from the day of “coloured toilet facilities”. Yep that was a thing! And the white people got to use the better toilets? If that's not outrageous we don't know what is! But that's not a thing anymore. So what's the problem now?
+        <br><br>
+
+No matter the colour of your skin you have probably seen things online that make you roll your eyes a bit. Arguing over who’s better, who’s right, people defending police shooting blacks, white racism. Problem is. People judge people over their skin. That is the issue. Plain and simple.
+        <br><br>
+
+Police shooting people because they are black? Well hard to prove. In the USA a ridiculous amount of lives have been lost and too many of them have been black. But is this a racism problem or a gun problem? Gun legislation is a whole other topic but racism. Yep it’s STILL a thing. 
+        <br><br>
+
+The problem is how people grow up and put stereotypes to identifying features. Black guy commiting a crime? All over the newspapers and TV. White person? Yeah well not so much. It’s underlying racism that makes this worse. People who work in media grew up with this and are passing it on, police grew up with this and passing it on. Our children will get used to the fact that black people commit more crimes when really they don’t. It’s media highlighting this. 
+        <br><br>
+
+From one aspect to another. How many black celebrities, models and actors did you see growing up? Not as many as other colours. Even in makeup there is only now more choice for darker skin tones because people are making a stand. Rihanna's makeup brand Fenty is a step in the right direction. It is so important for children to see that all skin colors and tones are beautiful. And no matter your skin colour you can be strong, clever and caring.
+        <br><br>
+
+It starts at children to be honest. Which makes us think yes barbies are getting there. But where are the diverse action men?! Come on really?! 
+        <br><br>
+
+Also please can the media stop with the token black people. It is offensive to the point it is made fun of in film and TV! Just have a diverse bunch of characters. But don't force it. Also maybe make film and TV with no white people? Why is that not a thing? Not to discriminate against white people but it would just be a nice change to be honest. Diversity is not a bad thing. 
+        <br><br>
+
+Honestly there is so much to go with this. But underlying can we just stop treating people differently based on their skin colour. We still have a long way to to. It has gotten better from the point we are not being racist as in treating people horribly over skin colour. But there's not enough positivity and kindness either which seriously needs a freshen up in this century. We need more diverse role models, we need to stop calling people “aggressive”, “privileged”, “loud” “poor” based on the colour of their skin. Wait until you know them for real before labeling them.
+Break down barriers and be more inclusive. It is about time let’s be honest. People deserve to be treated with respect. 
+        <br><br>
+
+-Stay Outraged 
+    </p>
+       <br>
+    <h2 align="middle">HOW DO YOU FEEL AFTER READING THIS ARTICLE?</h2>
+     <div> <form method="post" action="q3yes.php" align="middle">
+  <input type="submit" name="yes" value="OUTRAGED" style="cursor: pointer;"> 
+</form>
+    
+<form method="post" action="q3maybe.php" align="middle">
+  <input type="submit" name="maybe" value="SLIGHTLY OUTRAGED" style="cursor: pointer;"> 
+</form>
+    
+<form method="post" action="q3no.php" align="middle">
+  <input type="submit" name="no" value="NOT OUTRAGED" style="cursor: pointer;"> 
+</form>
+    </div>
+    <h4 align="middle">DOWNLOAD OUR APP TO SEE THE RESULTS OF THIS POLL.</h4>
+        <br><br>
+<p>
+Article on Fenty <br>
+https://www.hercampus.com/school/chatham/why-rihanna-s-new-makeup-line-so-important
+                <br><br>
+
+It stops with me <br>
+https://itstopswithme.humanrights.gov.au/resources/what-you-say-matters/why-racism-problem
+                <br><br>
+
+How to fight racism <br>
+https://www.thoughtco.com/things-you-can-do-to-help-end-racism-3026187
+                <br><br>
+
+Childline <br>
+https://www.childline.org.uk/info-advice/bullying-abuse-safety/crime-law/racism/
+
+
+</p>
+    </div>
+</body>
+    
+    
+</html>

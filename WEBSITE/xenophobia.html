@@ -1,0 +1,150 @@
+<html>
+<head>
+<style>
+div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width:256px;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+ 
+
+
+</style>
+    <title>OUTRAGEOUS</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <script src="js/style.js"></script>
+<!--///////////////////////////////-->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+   <!-- The scrollable area -->
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+
+
+<!-- Navbar -->
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#"> </a>
+        
+    </div>
+    <div>
+       <img src="images/logo.png" width="50px" align="left" id="logo">
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">HOME</a></li>
+              <li><a href="articles.php">ARTICLES</a></li>
+
+        
+
+       
+            <?php
+    require("config.php");
+    if(empty($_SESSION['user'])) 
+    {
+        header("Location: secret.php");
+        die("Redirecting to secret.php"); 
+    }
+?>
+            <li><a href="logout.php">LOGOUT</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav> 
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:1000px;margin-top:100px">
+
+
+    <p><b>Xenophobia</b>
+        <br><br>
+
+
+What the… is xenophobia? Is it an illness? Nope. You have probably witnessed it in your life. Xenophobia is not a phobia but it might as well be it’s so ridiculous! Xenophobia is “The dislike of or prejudice against people from other countries.”
+        <br><br>
+
+So yes. You meet someone, begin to like them, they seem like a decent person. You feel you could hang out with them then… What?! They are Polish? All your respect is lost for them. They are stealing your job’s, using taxpayers money, YOUR money. They are stealing housing from you. Sealing money from your country and sending it elsewhere. They have to go back to their own country. 
+        <br><br>
+
+But that’s insane. Some people think like this and yes in some rare cases some of this may be true…-ish. But in reality they have just as much right to be here than anywhere else. And it is discrimination, plain and simple. Suddenly treating someone different because of where they are from. Regardless of anything else. It’s wrong. It would be the same as you moving house within your country but to a different location than being denied a job, harassed and told to leave. Because you moved.
+        <br><br>
+
+Unfortunately some people have strong opinions on this but hear us out on this one. We are all human. And we don't choose where we are born. There is limited resources in the world and at the end of the day everyone is doing the best they can for themselves. If you were in the same position you might immigrate to a different country too. I mean if they had better job opportunities, healthcare, education or another reason you might move. Why wouldn't you? If you work hard, get a job and try to make a life there why wouldn't you have a right to be there? Especially if you are trying to provide for a family.
+        <br><br>
+
+Again in some cases it can be unfair. Immigrants coming, and then using our benefit scheme when there are people born here who are struggling already. It can full well be unfair in SOME cases. But does that mean we should banket all foreigners with this? No. It’s as ridiculous as saying everyone in the UK are murdered because some are. People do not deserved to be judged and labeled based on where they are from. 
+        <br><br>
+
+Sometimes maybe they didn't even get a choice in the matter, their parents may of moved when they were younger and they had to grow up in a different country. Also if you denied the world of this sort of movement between countries. The UK especially will suddenly have a lot less doctors, nurses, lectures, chefs. Honestly nearly every profession will have a mix of people in it. 
+        <br><br>
+
+Migration is an unpopular topic in the UK, which can make it especially difficult for people to be kind and understanding to migrants. But try to direct anger towards the right place. The government is responsible for the law to be changed on this. Immigrants are not breaking any laws by moving, all they are doing is the best for themselves as you are too. If you disagree with this don't be hostile towards immigrants. This will not make them move! But political change can help with this so focus on that and be kind to people.
+        <br><br>
+
+So maybe next time you see someone getting angry about their immigrant neighbour or maybe you yourself are annoyed. Just remember are they actually doing anything wrong? And try to think if you were in their position. And honestly you could even see yourself thanking them for being in your life when you next go to the doctors, watch TV, use a taxi. Well anything really, the UK is diverse and wonderful. So be kind to people and do not judge and do not be xenophobic!
+        <br><br>
+
+        -Stay Outraged </p>
+    <br>
+    <h2 align="middle">HOW DO YOU FEEL AFTER READING THIS ARTICLE?</h2>
+     <div> <form method="post" action="q4yes.php" align="middle">
+  <input type="submit" name="yes" value="OUTRAGED" style="cursor: pointer;"> 
+</form>
+    
+<form method="post" action="q4maybe.php" align="middle">
+  <input type="submit" name="maybe" value="SLIGHTLY OUTRAGED" style="cursor: pointer;"> 
+</form>
+    
+<form method="post" action="q4no.php" align="middle">
+  <input type="submit" name="no" value="NOT OUTRAGED" style="cursor: pointer;"> 
+</form>
+    </div>
+    <h4 align="middle">DOWNLOAD OUR APP TO SEE THE RESULTS OF THIS POLL.</h4>
+        <br><br>
+    <p>
+Immigrant help  <br>
+http://www.migranthelpuk.org/        <br><br>
+
+Migrant information statistics <br>
+https://www.migrationwatchuk.org/statistics-net-migration-statistics        <br><br>
+
+
+
+
+</p>
+    
+    </div>
+</body>
+    
+    
+</html>

@@ -49,8 +49,8 @@
             $result = $stmt->execute(); 
         } 
         catch(PDOException $ex){ die("Failed to run query: " . $ex->getMessage()); } 
-        header("Location: index.php"); 
-        die("Redirecting to index.php"); 
+        header("Location: secret.php"); 
+        die("Redirecting to secret.php"); 
     } 
 ?>
 

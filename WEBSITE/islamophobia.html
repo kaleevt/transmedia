@@ -1,0 +1,159 @@
+<html>
+<head>
+<style>
+div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width:256px;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+ 
+
+
+</style>
+    <title>OUTRAGEOUS</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <script src="js/style.js"></script>
+<!--///////////////////////////////-->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+   <!-- The scrollable area -->
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+
+
+<!-- Navbar -->
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#"> </a>
+        
+    </div>
+    <div>
+       <img src="images/logo.png" width="50px" align="left" id="logo">
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">HOME</a></li>
+              <li><a href="articles.php">ARTICLES</a></li>
+
+        
+
+       
+            <?php
+    require("config.php");
+    if(empty($_SESSION['user'])) 
+    {
+        header("Location: secret.php");
+        die("Redirecting to secret.php"); 
+    }
+?>
+            <li><a href="logout.php">LOGOUT</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav> 
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:1000px;margin-top:100px">
+
+
+    <p><b>Islamophobia</b>
+        <br><br>
+
+
+A topic on most people’s minds especially recently with events and media. Terrorism. It fuels fear in most people’s hearts. It makes people scared to take public transport, be in big cities or attend events which could be a potential target. Do you know who shares these fears? Muslims. 
+
+<br>
+<br>
+It’s something probably even people who are not discriminative towards muslims forget. They are scared of terrorists too. They feel that same fear on public transport, in cities and at event’s. Terrorists yes can be muslims. But not all muslims are terrorists. “If all muslims were terrorists, let’s be honest. We would all be dead by now!”-Unknown. Let’s think about this for a minute. Last counted in 2015 there were roughly 1.8 billion Muslims. This would of gone up by now. Let’s assume all of them shared the belief of terrorists, and 1 in 10 were willing to act on this. That’s one hundred and eighty billion terrorists. The world would be run by terrorists, most people would be dead and honestly they would run out of people to hurt. Because it would only be them left.
+
+<br>
+<br>
+
+This is not what is happening! Far far from it. Terrorists can claim to be Muslim but do not really follow the same path of life or views. Terrorist’s take part of the Quran and twist it far beyond what it originally means. They take it out of proportion and want people to follow their version of religion. Hating everyone who disagrees even Muslims. 
+
+<br>
+<br>
+Terrorists are to blame for terrorist attacks. Not muslims. They literally have nothing to do with it and are just as much victims as everyone else. If anything it is worse for them, as along with fearing their safety along with everyone else they have to be discriminated and harassed by people who think they are terrorists. It’s so unfair for them. Think of it in the perspective of if your child got stabbed by a gang member. Then people started blaming you and saying your part of this gang and cause this pain. You stab people. So you get harassed and find it difficult in the workplace. This is what it is like for a muslim who may already be feeling the pain of a loved one being hurt by a terrorist then being called a terrorist. It’s ridiculous. 
+
+<br>
+<br>
+Quite a few ‘muslim’ terrorists do not even look like what people perceive as stereotypical terrorists. A lot are radicalised from the UK. At the end of the day anyone can look like a terrorist as they are radicalised and lead to believe this is what is right to do.
+
+<br>
+<br>
+Be kind to all people of different religions. And at the very worst if you can’t just don’t be horrible to them. Just let them live their life and stay out of it. Nobody has the right to call someone a terrorist unless they plan to or cause an act of terror. Muslims do not like them just as much as everyone else. Remember that. 
+
+<br>
+<br>
+-Stay Outraged 
+    </p>
+     <br>
+    <h2 align="middle">HOW DO YOU FEEL AFTER READING THIS ARTICLE?</h2>
+     <div> <form method="post" action="q2yes.php" align="middle">
+  <input type="submit" name="yes" value="OUTRAGED" style="cursor: pointer;"> 
+</form>
+    
+<form method="post" action="q2maybe.php" align="middle">
+  <input type="submit" name="maybe" value="SLIGHTLY OUTRAGED" style="cursor: pointer;"> 
+</form>
+    
+<form method="post" action="q2no.php" align="middle">
+  <input type="submit" name="no" value="NOT OUTRAGED" style="cursor: pointer;"> 
+</form>
+    </div>
+    <h4 align="middle">DOWNLOAD OUR APP TO SEE THE RESULTS OF THIS POLL.</h4>
+        <br><br>
+    <p>
+Citizens Advice Discrimination <br>
+https://www.citizensadvice.org.uk/law-and-courts/discrimination/discrimination-because-of-race-religion-or-belief/discrimination-because-of-religion-or-belief/
+<br>
+<br>
+How you can fight islamophobia <br>
+https://www.soundvision.com/article/14-ways-you-can-fight-islamophobia
+
+<br>
+<br>
+Gov Press release <br>
+https://www.gov.uk/government/news/young-muslims-in-the-uk-face-enormous-social-mobility-barriers
+https://www.theguardian.com/lifeandstyle/2014/jun/15/paternity-leave-pay-doubled-fathers
+<br>
+<br>
+ Help for people dealing with Islamophobia <br>
+https://tellmamauk.org/
+
+</p>
+    </div>
+</body>
+    
+    
+</html>
